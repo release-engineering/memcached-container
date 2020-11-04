@@ -21,10 +21,9 @@ The recommended deployment method is OpenShift.
 All configuration of the image is handled via environment variables, provided
 by your container runtime environment.
 
-- MEMCACHED_CACHE_SIZE: Number of MB of memory to use for object
-  storage; the default is 64.
-- MEMCACHED_CONNECTIONS: Max simultaneous connections; the default is 1024.
-- MEMCACHED_THREADS: Number of threads to use to process incoming requests.
-  The default is 4.
-- MEMCACHED_ARGS: Command-line options that will be passed directly to
-  memcached.
+- `MEMCACHED_CACHE_SIZE`: Number of MB of memory to use for object storage, the
+  default is 64.
+- `MEMCACHED_CONNECTIONS`: Max simultaneous connections, the default is 1024.
+- `MEMCACHED_THREADS`: Number of threads to use to process incoming requests,
+  the default is 4.
+- `MEMCACHED_ARGS`: Command-line options to pass directly to memcached.
