@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 if [ -n "$MEMCACHED_CACHE_SIZE" ]; then
     MEMCACHED_ARGS+=" -m $MEMCACHED_CACHE_SIZE"
 fi
