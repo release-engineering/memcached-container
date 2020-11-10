@@ -1,4 +1,4 @@
-FROM fedora:33
+FROM registry.fedoraproject.org/fedora-minimal:33
 
 LABEL org.opencontainers.image.title="memcached" \
       org.opencontainers.image.description="memcached in a container, suitable for running on OpenShift" \
@@ -12,7 +12,7 @@ LABEL org.opencontainers.image.title="memcached" \
 EXPOSE 11211
 CMD  ["/usr/local/bin/start-memcached.sh"]
 
-RUN dnf -y install memcached && dnf clean all
+RUN microdnf -y install memcached && microdnf clean all
 COPY start-memcached.sh /usr/local/bin/start-memcached.sh
 RUN chmod 755 /usr/local/bin/start-memcached.sh
 
